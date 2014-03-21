@@ -1,0 +1,11 @@
+#content
+  %ul
+    %li
+      %span= "Status"
+      %span= @ticket.ticket_status.title
+    %li= @ticket.title
+    %li= @ticket.description
+    %li
+      = render partial: 'comments', locals: { comments: @ticket.comments }
+  =link_to 'Edit', edit_ticket_path(@ticket)
+  =link_to 'Back to main page', root_path

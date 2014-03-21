@@ -1,0 +1,9 @@
+!!!
+%html
+  %head
+    %meta{ content: 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type'}
+  %body
+    %h1= 'Your ticket will be processed as soon as possible'
+    %div
+      = 'To track changes you can visit this link'
+      = link_to('Track changes', ticket_url(@ticket))

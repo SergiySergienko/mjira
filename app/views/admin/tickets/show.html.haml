@@ -1,0 +1,11 @@
+.block
+  .content
+    %ul
+      %li
+        %span= "Status"
+        %span= @ticket.ticket_status.title
+      %li= @ticket.title
+      %li= @ticket.description
+      %li
+        = render partial: 'comments', locals: { comments: @ticket.comments }
+    =link_to 'Back', admin_tickets_path

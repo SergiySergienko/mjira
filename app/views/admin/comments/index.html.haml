@@ -1,0 +1,11 @@
+.block
+  .content
+    %h2= 'Comments'
+    %table.table
+      %th= 'Comment data'
+      %th= 'Created at'
+      %th= 'Actions'
+      - @comments.each do |comment|
+        = render partial: 'admin/comments/detail/teaser', locals: {comment: comment}
+    = link_to 'Add new', new_admin_ticket_comment_path(@ticket)
+    = link_to 'Back to tickets', admin_tickets_path

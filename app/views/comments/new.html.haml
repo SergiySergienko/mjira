@@ -1,0 +1,6 @@
+.block
+  .content
+    .form
+      = render partial: 'admin/errors/error_messages', locals: { entity: @comment }
+      = render partial: 'form'
+    =link_to 'Back', ticket_path(@ticket)

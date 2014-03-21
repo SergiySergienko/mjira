@@ -1,0 +1,5 @@
+development:
+  statuses: ['New unassigned ticket',
+             'Open ticket',
+             'On hold ticket',
+             'Closed ticket']

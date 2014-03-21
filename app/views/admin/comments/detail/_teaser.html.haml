@@ -1,0 +1,4 @@
+%tr{ class: cycle('even', 'odd')}
+  %td.description= comment.body
+  %td.datetime= comment.created_at
+  %td.links= render partial: 'admin/comments/detail/links', locals: { comment: comment }

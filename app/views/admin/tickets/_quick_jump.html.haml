@@ -1,0 +1,5 @@
+=form_tag admin_quick_jump_path, {method: :get} do |f|
+  %ul
+    %li= label_tag :id, 'Ticket ID'
+    %li= text_field_tag :id
+  =submit_tag 'Jump'

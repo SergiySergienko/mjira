@@ -1,0 +1,7 @@
+%tr{ class: cycle('even', 'odd')}
+  %td.title= ticket.title
+  %td.description= ticket.description
+  %td.current_status= ticket.ticket_status.title
+  %td.customer_name= ticket.customer_name
+  %td.customer_email= ticket.customer_email
+  %td.links= render partial: 'admin/tickets/detail/links', locals: { ticket: ticket }

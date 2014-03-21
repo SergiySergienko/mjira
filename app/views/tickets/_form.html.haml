@@ -1,0 +1,12 @@
+=form_for @ticket do |f|
+  = f.hidden_field :id
+  %ul
+    %li= f.label :customer_name, 'Your name'
+    %li= f.text_field :customer_name
+    %li= f.label :customer_email, 'Your email'
+    %li= f.text_field :customer_email
+    %li= f.label :title, 'Ticket title'
+    %li= f.text_field :title
+    %li= f.label :description, 'Ticket description'
+    %li= f.text_area :description
+  =f.submit 'Post ticket'

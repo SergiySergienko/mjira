@@ -1,0 +1,4 @@
+- if entity.errors.any?
+  %ul.errors
+    - entity.errors.full_messages.each do |msg|
+      %li= msg

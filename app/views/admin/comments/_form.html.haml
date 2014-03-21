@@ -1,0 +1,7 @@
+=form_for [:admin, @ticket, @comment] do |f|
+  = f.hidden_field :id
+  = f.hidden_field :ticket_id
+  %ul
+    %li= f.label :body, 'Comment description'
+    %li= f.text_area :body
+  =f.submit

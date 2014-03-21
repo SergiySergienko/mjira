@@ -1,0 +1,23 @@
+.block
+  .content
+    %h2= 'My tickets'
+    = render partial: 'quick_jump'
+    %table.table
+      %th= 'Title'
+      %th= 'Description'
+      %th= 'Ticket status'
+      %th= 'Customer name'
+      %th= 'Customer email'
+      %th= 'Actions'
+      - @tickets.assigned_to(current_user).each do |ticket|
+        = render partial: 'admin/tickets/detail/teaser', locals: {ticket: ticket}
+    %h2= 'All tickets'
+    %table.table
+      %th= 'Title'
+      %th= 'Description'
+      %th= 'Ticket status'
+      %th= 'Customer name'
+      %th= 'Customer email'
+      %th= 'Actions'
+      - @tickets.unassigned.each do |ticket|
+        = render partial: 'admin/tickets/detail/teaser', locals: {ticket: ticket}

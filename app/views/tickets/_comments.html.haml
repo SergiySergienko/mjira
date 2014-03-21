@@ -1,0 +1,7 @@
+- if comments.present? && !comments.empty?
+  %span= 'Comments:'
+  %ul
+    - comments.each do |comment|
+      %li
+        %span= comment.body
+= link_to 'Add new', new_ticket_comment_path(@ticket)

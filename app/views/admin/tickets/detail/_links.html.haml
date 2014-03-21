@@ -1,0 +1,4 @@
+= link_to (ticket.is_my?(current_user) ? 'Unassing' : 'Assing to me'), admin_ticket_assign_path(ticket)
+= link_to 'Comments', admin_ticket_comments_path(ticket)
+= link_to 'Edit', edit_admin_ticket_path(ticket)
+= link_to 'Destroy', admin_ticket_path(ticket), method: :delete

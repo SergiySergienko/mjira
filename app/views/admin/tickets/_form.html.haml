@@ -1,0 +1,14 @@
+=form_for [:admin, @ticket] do |f|
+  = f.hidden_field :id
+  %ul
+    %li= f.label :ticket_status, 'Ticket status'
+    %li= f.collection_select :ticket_status_id, TicketStatus.all, :id, :title
+    %li= f.label :customer_name, 'Customer name'
+    %li= f.text_field :customer_name
+    %li= f.label :customer_email, 'Customer email'
+    %li= f.text_field :customer_email
+    %li= f.label :title, 'Ticket title'
+    %li= f.text_field :title
+    %li= f.label :description, 'Ticket description'
+    %li= f.text_area :description
+  =f.submit
